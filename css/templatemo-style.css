@@ -301,9 +301,9 @@ header {
 }
 
 .sidebar-navigation .social-icons {
-  position: absolute;
+  position:absolute;
   width: 100%;  
-  bottom: 10px;
+  bottom: 40px;
   padding: 0;
   margin: 0;
   text-align: center;
@@ -378,7 +378,7 @@ header {
 
 .Modern-Slider .info p {
   
-    font-size: 15px;
+    font-size: 20px;
     color: #f7f5f5; /* Color del texto */
     /* font-weight: bold; */
     text-shadow: 
@@ -788,7 +788,7 @@ header {
   padding-left: 60px;
   padding-right: 60px;
   padding-bottom: 80px;
-  background: #bbb3b3;
+  /* background: #bbb3b3; */
 }
 
 #blog .tabs {
