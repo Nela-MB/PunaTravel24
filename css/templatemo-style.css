@@ -70,6 +70,7 @@ p {
 }
 
 .section-heading p {
+  text-align: justify;
   display: inline-block;
   font-size: 15px;
   line-height: 26px;
@@ -390,8 +391,8 @@ header {
 .Modern-Slider .info p {
   
     font-size: 20px;
-    color: #f7f5f5; /* Color del texto */
-    /* font-weight: bold; */
+    color: #0c0c0c; /* Color del texto */
+    font-weight: bold;
     text-shadow: 
     2px 2px 12px rgb(32, 32, 31), -6px -6px 12px rgb(240, 68, 25) /* Borde negro alrededor del texto */
 }
@@ -461,6 +462,9 @@ header {
 }
 
 .Modern-Slider .item-3 .image {
+  background-image: url(../img/banner-piedrapome.png);
+}
+.Modern-Slider .item-4 .image {
   background-image: url(../img/banner-cañon.png);
 }
 
@@ -682,7 +686,7 @@ header {
 
 #blog .masonry .item img {
   transition: all 1s;
-  width: 100%;
+  width: 80%;
   overflow: hidden;
   margin-bottom: 30px;
 }
@@ -696,7 +700,7 @@ header {
 #video {
   text-align: center;
   /* background-color: #f0ee86; */
-  padding: 100px 60px;
+  padding: 10px 60px;
 }
 
 #video .section-heading {
@@ -714,8 +718,14 @@ header {
   margin: 0px;
 }
 
-#video .accent-button {
+#video .accent-button a{
   margin-top: 30px;
+  background:#22ca22
+}
+
+.nuestrasredes{
+  color: #45489a;
+  font-size: larger;
 }
 
 .box-video{
@@ -918,7 +928,7 @@ header {
 /* Contact Style */
 
 #contact {
-  padding-top: 0px;
+  padding-top: 20px;
   
 }
 
@@ -926,6 +936,11 @@ header {
   padding: 80px 60px;
   background: white;
 }
+ 
+/* #contact .row p{
+  color: #45489a;
+  font-size: larger;
+} */
 
 #contact input {
   border-radius: 0px;
@@ -965,7 +980,7 @@ header {
   font-weight: 600;
   color: #fff;
   text-transform: capitalize;
-  background-color: #45489a;
+  background-color: #22ca22;
   display: inline-block;
   height: 44px;
   line-height: 24px;
@@ -979,7 +994,7 @@ header {
 
 #contact button:hover {
   color: #232323;
-  background-color: #f4f4f4;
+  background-color: #dce65a;
 }
 
 
