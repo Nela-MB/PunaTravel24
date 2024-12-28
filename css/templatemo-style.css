@@ -367,13 +367,14 @@ header {
 }
 
 .sidebar-navigation .social-icons li a {
-  font-size: 18px;
-  color: #fff;
+  font-size: 20px;
+  color: #ebeef0;
   transition: all 0.5s;
 }
 
 .sidebar-navigation .social-icons li a:hover {
-  color: #45489a;
+  color: #dbf110;
+  
 }
 
 
