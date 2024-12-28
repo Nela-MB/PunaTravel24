@@ -33,9 +33,10 @@
 
 
         <header class="nav-down responsive-nav hidden-lg hidden-md">
+            
             <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
                 <img src="img/logo1-removebg-preview.png" alt="Menu" width="20%" height="20%">
-                <!-- <span class="sr-only">Toggle navigation</span>
+                <!-- <span class="sr-only">Menu</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span> -->
@@ -61,7 +62,7 @@
         <div class="sidebar-navigation hidde-sm hidden-xs">
             <div class="logo">
                 
-                <a href="#"><img src="img/logo1-removebg-preview.png"></a>
+                <a href="#top"><img src="img/logo1-removebg-preview.png"></a>
 
                 <!-- <a href="#">Sen<em>tra</em></a> -->
             </div>
@@ -127,10 +128,10 @@
                 </ul>
             </nav>
             <ul class="social-icons">
-                <li><a href="https://wa.me/3837405111" target="_blank"><i class="fab fa-viber"></i></a></li>
-                <li><a href="https://www.facebook.com/profile.php?id=100095130218200&sk=photos" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
-                <li><a href="https://www.instagram.com/puna_travel/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <!-- <li><a href="#"><i class="fa fa-linkedin"></i></a></li> -->
+                <li><a href="https://wa.me/3837405111" target="_blank"><i class="fab fa-viber" style="color: yellow;"></i></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100095130218200&sk=photos" target="_blank"><i class="fab fa-facebook-square" style="color: yellow;"></i></a></li>
+                <li><a href="https://www.instagram.com/puna_travel/" target="_blank"><i class="fab fa-instagram" style="color: yellow;"></i></a></li>
+                <li><a href="#"><i class="fa-regular fa-share-nodes"></i>
                 <!-- <li><a href="#"><i class="fa fa-behance"></i></a></li> -->
             </ul>
         </div>
@@ -164,7 +165,7 @@
                         <div class="image"></div>
                         <div class="info">
                         <div>
-                          <h1>Dunas <br>magicas</h1>
+                          <h1>Dunas <br>Magicas</h1>
                           <p>Descubre la magia de las Dunas, 
 							<br>un océano de arena te espera.</p>
                           
@@ -205,7 +206,7 @@
                         <div class="image"></div>
                         <div class="info">
                         <div>
-                          <h1>Campo <br>Piedra Pome</h1>
+                          <h1>Campo de<br>Piedra Pome</h1>
                           <p>Una aventura única en un paisaje de ensueño. 
 							<br> ¡Explora con nosotros!</p>
                           
@@ -415,7 +416,10 @@
                     </div>
                 </div>
             </section>
+            <!-- <div class="separador">
 
+                <p>-  -</p>
+            </div> -->
             <!-- ------ DUNAS -------- -->
              
             <section id="featured" class="content-section">
@@ -677,6 +681,16 @@
                         </div>
                     </div>
                 </div>
+                <div class="rating">
+                    <span class="star" onclick="rate(1)">★</span>
+                    <span class="star" onclick="rate(2)">★</span>
+                    <span class="star" onclick="rate(3)">★</span>
+                    <span class="star" onclick="rate(4)">★</span>
+                    <span class="star" onclick="rate(5)">★</span>
+                    <p id="visit-count-1">Visitas: <span id="count-1">0</span></p>
+                </div>
+
+
             </section>
 
            <!-- ------CONTACTANOS------ -->
@@ -705,18 +719,21 @@
                             <a href="https://www.instagram.com/puna_travel/" target="_blank"><i class="fab fa-instagram" style='font-size:20px ;color:rgb(163, 204, 14)'></i></a>
                             <!-- <li><a href="#"><i class="fa fa-linkedin"></i></a></li> -->
                             <!-- <li><a href="#"><i class="fa fa-behance"></i></a></li> -->
-                        
+                        <p><br><br></p>    
                     </div>
                     <div id="map">
                 
                         
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.718395592836!2d-67.56678982451994!3d-28.063621775980188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x969e057fafe2e7c7%3A0x93c20291c8c5a16d!2sPUNA%20TRAVEL%20ADVENTURE%204x4!5e0!3m2!1ses!2sar!4v1734658414396!5m2!1ses!2sar" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
+                    <p><br></p>
                 </section>
+
     
                 
             </section>
             <section class="footer">
+              
                 <p> Design: &copy; BarrionuevoMarianela 
                 
                 </p>
@@ -732,6 +749,7 @@
     <script src="js/main.js"></script>
 
     <script>
+        
         // Hide Header on on scroll down
         var didScroll;
         var lastScrollTop = 0;
@@ -770,6 +788,25 @@
             
             lastScrollTop = st;
         }
+
+        // Contadores de visitas
+        let visitCounts = [0, 0, 0, 0]; // Cambia según el número de items
+
+        function rate(star) {
+            const itemIndex = star - 1; // Index para el item
+            visitCounts[itemIndex]++;
+            document.getElementById(`count-${itemIndex + 1}`).innerText = visitCounts[itemIndex];
+            alert(`Gracias por puntuar con ${star} estrellas!`);
+        }
+
+        // Incrementar visitas al cargar la página
+        window.onload = function() {
+            for (let i = 0; i < visitCounts.length; i++) {
+                visitCounts[i]++; // Incrementa cada visita
+                document.getElementById(`count-${i + 1}`).innerText = visitCounts[i];
+            }
+        }
+
     </script>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
