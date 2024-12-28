@@ -158,6 +158,9 @@ header {
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
+
+  font-family: cursive;
+  color: red;
 }
 
 .navbar-nav {
@@ -196,6 +199,31 @@ header {
   background-color: #232323;
 }
 
+  /* Boton Flotante */
+
+ 
+  .flotante .btn-flotante .btn{
+    text-decoration: none;
+    font-size: 2rm;
+    font-weight: bold;
+    letter-spacing: 2px; /*espacio entre letras*/
+    background-color: #30bb30;
+    padding: 15px 15px;
+    color: white;
+    border-radius: 50%;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0px 8px 15px rgba(255,255,255,0.3 );
+    z-index: 99;
+  }
+
+  .flotante .btn-flotante .btn:hover{
+    color: #ee270d;
+    box-shadow: 0px 15px  rgba(255,255,255,0.1 );
+    transform: translateY(-7px);
+  }
 
 /* Sidebar Style */
 
@@ -220,7 +248,7 @@ header {
 }
 .sidebar-navigation .logo img{
   max-width: 170px; /* Ajusta el tamaño de la imagen */
-    height: 80%; /* Mantener la proporción de la imagen */
+    height: 60%; /* Mantener la proporción de la imagen */
     margin-right: 300px; /* Espaciado entre la imagen y el menú */
     margin-left: 40px;
     
@@ -738,7 +766,7 @@ header {
 .box-video{
   width: 100%;
   position: relative;
-  margin-top: 30px;
+  margin-top: 10px;
   cursor: pointer;
   overflow: hidden;
 }
