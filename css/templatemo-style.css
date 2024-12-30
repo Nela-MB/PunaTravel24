@@ -1144,7 +1144,7 @@ header {
     z-index:5;
   }
 
-  
+ 
 
 }
 
@@ -1157,6 +1157,7 @@ header {
   #featured {
     padding-left: 15px;
     padding-right: 15px;
+    background: #000;
   }
 
   #featured .owl-nav {
