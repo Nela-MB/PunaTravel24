@@ -537,7 +537,7 @@ header {
 /* Featured Style */
 
 #featured {
-  background: #d4d3d3;
+  /* background: #d4d3d3; */
   padding-left: 60px;
   padding-right: 60px;
   padding-bottom: 80px;
@@ -560,7 +560,7 @@ header {
 #featured .owl-dots .owl-dot span  {
   width: 12px;
   height: 12px;
-  background-color: #cdcdcd!important;
+  background-color: #f8f4f4!important;
   display: inline-block;
   border-radius: 50%;
   margin: 0 3px;
