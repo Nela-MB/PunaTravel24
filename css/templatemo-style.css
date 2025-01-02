@@ -502,7 +502,7 @@ header {
   background-image: url(../img/banner-piedrapome.png);
 }
 .Modern-Slider .item-4 .image {
-  background-image: url(../img/banner-cañon.png);
+  background-image: url(../img/banner-cañon.jpg);
 }
 
 .Modern-Slider .PrevArrow:before{content:'\f104';}
@@ -1063,7 +1063,6 @@ header {
 }
 
 
-
 /* Responsive Style */
 
 @media (max-width: 992px) {
@@ -1199,6 +1198,8 @@ header {
   #contact-content {
     padding-left: 15px;
     padding-right: 15px;
+    
   }
 
+  
 }
